@@ -22,7 +22,6 @@ __pycache__/
 *.so
 
 # Distribution / packaging
-.Python
 build/
 develop-eggs/
 dist/
@@ -98,7 +97,6 @@ celerybeat-schedule
 
 # Environments
 .env
-.venv
 env/
 venv/
 ENV/
@@ -125,3 +123,5 @@ venv.bak/
 .idea/modules.xml
 .idea/workspace.xml
 /.idea/vcs.xml
+1-02E-ScatterplotExercises/scatter.html
+1-03-LineCharts/temp-plot.html
