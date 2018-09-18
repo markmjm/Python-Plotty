@@ -50,11 +50,12 @@ app.layout = html.Div([
     Output('click-image', 'src'),
     [Input('wheels-plot', 'clickData')])
 def callback_image(clickData):
-    wheel=clickData['points'][0]['y']
-    color=clickData['points'][0]['x']
-    path = '../data/images/'
-    return encode_image(path+df[(df['wheels']==wheel) & \
-    (df['color']==color)]['image'].values[0])
+    if clickData:
+        wheel=clickData['points'][0]['y']
+        color=clickData['points'][0]['x']
+        path = '../data/images/'
+        return encode_image(path+df[(df['wheels']==wheel) & \
+        (df['color']==color)]['image'].values[0])
 
 if __name__ == '__main__':
     app.run_server()
